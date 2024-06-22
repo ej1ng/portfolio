@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url(fonts/Outfit-Light.ttf);
+}
+div.loading-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+div.icon {
+    display: block;
+    animation: bounce 1.2s cubic-bezier(.4,0,.43,.99) infinite;
+    text-align: center;
+}
+div.icon img {
+    width: 70px;
+    margin: auto; /* centers the dog*/
+}
+#loading {
+    font-size: 18px;
+    font-family: Outfit;
+}
+div.icon * {
+    display: block;
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
