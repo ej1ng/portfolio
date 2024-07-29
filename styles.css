@@ -1,39 +1,118 @@
 @font-face {
     font-family: 'Outfit';
-    src: url(fonts/Outfit-Light.ttf);
+    src: url(../fonts/Outfit-Light.ttf);
 }
-div.loading-screen {
+/* add another font */
+@font-face {
+    font-family: 'Aubrey';
+    src: url(../fonts/Aubrey.ttf);
+}
+body {
+    margin: 0;
+    background-color: white;
+}
+/* Navbar styles */
+.screen {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
+    display: block;
     justify-content: center;
     text-align: center;
 }
-div.icon {
+.navWrap {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebecfd;
+}
+.navBar {
+    display: flex;
+    width: 70vw;
+    height: 7vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebecfd;
+}
+.navOptions {
+    display: flex;
+    width: 50vw;
+    height: 7vh;
+    align-items: center;
+    justify-content: right;
+}
+.navLogo {
+    display: flex;
+    width: 20vw;
+    height: 7vh;
+    align-items: center;
+    justify-content: left;
+}
+#logo {
     display: block;
-    animation: bounce 1.2s cubic-bezier(.4,0,.43,.99) infinite;
-    text-align: center;
+    width: 4vh;
 }
-div.icon img {
-    width: 70px;
-    margin: auto; /* centers the dog*/
-}
-#loading {
-    font-size: 18px;
+.button {
+    display: block;
     font-family: Outfit;
+    color: #101769;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vh;
+    margin-left: 3vw;
+    border-bottom: 2px solid;
+    border-color: #ebecfd;
 }
-div.icon * {
-    display: block;
+.button:hover {
+    color: #535895;
+    border-bottom: 2px solid;
+}
+
+/* Body styles */
+.content {
+    height: 200vh;
+    width: 100vw;
+    margin: 0;
+}
+#bodyText {
+    font-size: 5vh;
+    font-family: Aubrey;
+    color: black;
+    animation: transitionIn 0.75s;
+    transition-delay: 0.1s;
+    margin: 0;
+}
+.firstBlock {
+    height: 75vh;
+    width: 100vw;
+    background-color: pink;
 }
 @keyframes bounce {
-    0%{
+    0% {
         transform: translateY(0px);
     }
-    50%{
+    50% {
         transform: translateY(-25px);
     }
-    100%{
+    100% {
         transform: translateY(0px);
     }
 }
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-50deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+/*  231942,
+    5E548E,
+    9F86C0,
+    BE95C4,
+    E0B1CB  */
