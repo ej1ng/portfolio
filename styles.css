@@ -2,7 +2,6 @@
     font-family: 'Outfit';
     src: url(../fonts/Outfit-Light.ttf);
 }
-/* add another font */
 @font-face {
     font-family: 'Aubrey';
     src: url(../fonts/Aubrey.ttf);
@@ -28,7 +27,7 @@ body {
 }
 .navBar {
     display: flex;
-    width: 70vw;
+    width: 80vw;
     height: 7vh;
     align-items: center;
     justify-content: center;
@@ -36,14 +35,14 @@ body {
 }
 .navOptions {
     display: flex;
-    width: 50vw;
+    width: 55vw;
     height: 7vh;
     align-items: center;
     justify-content: right;
 }
 .navLogo {
     display: flex;
-    width: 20vw;
+    width: 25vw;
     height: 7vh;
     align-items: center;
     justify-content: left;
@@ -54,7 +53,7 @@ body {
 }
 .button {
     display: block;
-    font-family: Outfit;
+    font-family: Skia;
     color: #101769;
     text-align: center;
     text-decoration: none;
@@ -88,26 +87,33 @@ body {
 .leftBlock {
     height: 90vh;
     width: 50vw;
-    background-color: white;
+    display: block;
+}
+.descriptionBox {
+    display: block;
+    width: 50vh;
+    justify-content: center;
+    margin: auto;
+    padding-top: 5vh;
 }
 #introText {
-    font-size: max(4vw, 30px);
+    font-size: 9vh;
     font-family: Aubrey;
     color: black;
     animation: transitionIn 1s;
-    padding-top: 20vh;
+    padding-top: 28vh;
 }
 #bodyText {
-    font-size: max(1.2em, 11px);
-    font-family: Outfit;
+    font-size: 2.5vh;
+    font-family: Skia;
     color: black;
     animation: transitionIn 1s;
 }
 #me {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 80%;
+    max-height: 80%;
     animation: transitionIn 1s;
-    padding-top: 10vh;
+    padding-top: 8vh;
 }
 .expContent {
     display: flex;
@@ -124,8 +130,136 @@ body {
     }
 }
 
-/*  231942,
-    5E548E,
-    9F86C0,
-    BE95C4,
-    E0B1CB  */
+
+@media only screen and (max-width: 600px) {
+    .contentBlock{
+        display: block;
+        height: 200vh;
+        width: 100vw;
+    }
+    .introContent {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .rightBlock {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .leftBlock {
+        height: 50vh;
+        width: 100vw;
+        display: block;
+    }
+    #introText {
+        font-size: 60px;
+        font-family: Aubrey;
+        color: black;
+        animation: transitionIn 1s;
+        padding-top: 20vh;
+    }
+    #bodyText {
+        font-size: 22px;
+        font-family: Skia;
+        color: black;
+        animation: transitionIn 1s;
+    }
+    .descriptionBox {
+        display: block;
+        width: 380px;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .contentBlock{
+        display: block;
+        height: 200vh;
+        width: 100vw;
+    }
+    .introContent {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .rightBlock {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .leftBlock {
+        height: 50vh;
+        width: 100vw;
+        display: block;
+    }
+    #introText {
+        font-size: 9vh;
+        font-family: Aubrey;
+        color: black;
+        animation: transitionIn 1s;
+        padding-top: 20vh;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .contentBlock{
+        display: block;
+        height: 200vh;
+        width: 100vw;
+    }
+    .introContent {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .rightBlock {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .leftBlock {
+        height: 50vh;
+        width: 100vw;
+        display: block;
+    }
+    #introText {
+        font-size: 9vh;
+        font-family: Aubrey;
+        color: black;
+        animation: transitionIn 1s;
+        padding-top: 20vh;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .contentBlock{
+        display: block;
+        height: 200vh;
+        width: 100vw;
+    }
+    .introContent {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .rightBlock {
+        height: 90vh;
+        width: 100vw;
+        display: block;
+    }
+    .leftBlock {
+        height: 50vh;
+        width: 100vw;
+        display: block;
+    }
+    #introText {
+        font-size: 9vh;
+        font-family: Aubrey;
+        color: black;
+        animation: transitionIn 1s;
+        padding-top: 20vh;
+    }
+}
