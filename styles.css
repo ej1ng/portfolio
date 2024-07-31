@@ -69,49 +69,48 @@ body {
 }
 
 /* Body styles */
-.content {
+.contentBlock{
+    display: block;
+    height: 200vh;
+    width: 100vw;
+}
+.introContent {
     height: 90vh;
     width: 100vw;
     display: flex;
     align-items: center;
 }
-.right {
+.rightBlock {
     height: 90vh;
     width: 50vw;
-    background-color: lavender;
+    display: block;
 }
-.left {
+.leftBlock {
     height: 90vh;
     width: 50vw;
-    align-items: center;
+    background-color: white;
 }
 #introText {
-    font-size: 6vh;
+    font-size: max(4vw, 30px);
     font-family: Aubrey;
     color: black;
-    animation: transitionIn 0.75s;
-    padding-top: 15vh;
+    animation: transitionIn 1s;
+    padding-top: 20vh;
 }
 #bodyText {
-    font-size: 2vh;
+    font-size: max(1.2em, 11px);
     font-family: Outfit;
     color: black;
-    animation: transitionIn 0.75s;
+    animation: transitionIn 1s;
 }
 #me {
-    
+    max-width: 75%;
+    max-height: 75%;
+    animation: transitionIn 1s;
+    padding-top: 10vh;
 }
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-25px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+.expContent {
+    display: flex;
 }
 
 @keyframes transitionIn {
