@@ -16,7 +16,6 @@ body {
     width: 100vw;
     height: 100vh;
     display: block;
-    justify-content: center;
     text-align: center;
 }
 .navWrap {
@@ -25,7 +24,7 @@ body {
     height: 10vh;
     align-items: center;
     justify-content: center;
-    background-color: #ebecfd;
+    background-color: lavender;
 }
 .navBar {
     display: flex;
@@ -33,7 +32,7 @@ body {
     height: 7vh;
     align-items: center;
     justify-content: center;
-    background-color: #ebecfd;
+    background-color: lavender;
 }
 .navOptions {
     display: flex;
@@ -62,7 +61,7 @@ body {
     font-size: 3vh;
     margin-left: 3vw;
     border-bottom: 2px solid;
-    border-color: #ebecfd;
+    border-color: lavender;
 }
 .button:hover {
     color: #535895;
@@ -71,23 +70,38 @@ body {
 
 /* Body styles */
 .content {
-    height: 200vh;
+    height: 90vh;
     width: 100vw;
-    margin: 0;
+    display: flex;
+    align-items: center;
 }
-#bodyText {
-    font-size: 5vh;
+.right {
+    height: 90vh;
+    width: 50vw;
+    background-color: lavender;
+}
+.left {
+    height: 90vh;
+    width: 50vw;
+    align-items: center;
+}
+#introText {
+    font-size: 6vh;
     font-family: Aubrey;
     color: black;
     animation: transitionIn 0.75s;
-    transition-delay: 0.1s;
-    margin: 0;
+    padding-top: 15vh;
 }
-.firstBlock {
-    height: 75vh;
-    width: 100vw;
-    background-color: pink;
+#bodyText {
+    font-size: 2vh;
+    font-family: Outfit;
+    color: black;
+    animation: transitionIn 0.75s;
 }
+#me {
+    
+}
+
 @keyframes bounce {
     0% {
         transform: translateY(0px);
