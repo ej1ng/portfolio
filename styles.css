@@ -17,21 +17,15 @@ body {
     display: block;
     text-align: center;
 }
-.navWrap {
+.navBar {
     display: flex;
-    width: 100vw;
+    width: 70vw;
     height: 10vh;
     align-items: center;
     justify-content: center;
     background-color: lavender;
-}
-.navBar {
-    display: flex;
-    width: 80vw;
-    height: 7vh;
-    align-items: center;
-    justify-content: center;
-    background-color: lavender;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 .navOptions {
     display: flex;
@@ -53,7 +47,7 @@ body {
 }
 .button {
     display: block;
-    font-family: Skia;
+    font-family: Poppins;
     color: #101769;
     text-align: center;
     text-decoration: none;
@@ -71,30 +65,31 @@ body {
 .contentBlock{
     display: block;
     height: 200vh;
-    width: 100vw;
+    width: 70vw;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 .introContent {
     height: 90vh;
-    width: 100vw;
+    width: 70vw;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .rightBlock {
     height: 90vh;
-    width: 50vw;
+    width: 35vw;
     display: block;
 }
 .leftBlock {
     height: 90vh;
-    width: 50vw;
-    display: block;
+    width: 35vw;
+    text-align: left;
 }
 .descriptionBox {
-    display: block;
+    display: flex;
     width: 50vh;
-    justify-content: center;
-    margin: auto;
-    padding-top: 5vh;
+    text-align: left;
 }
 #introText {
     font-size: 9vh;
@@ -102,18 +97,27 @@ body {
     color: black;
     animation: transitionIn 1s;
     padding-top: 28vh;
+    padding-bottom: 5vh;
 }
-#bodyText {
+#introSubText {
     font-size: 2.5vh;
-    font-family: Skia;
+    font-family: Poppins;
     color: black;
     animation: transitionIn 1s;
+}
+#bodyText {
+    font-size: 2vh;
+    font-family: Poppins;
+    color: black;
+    animation: transitionIn 1s;
+    padding-left: 20%;
 }
 #me {
     max-width: 80%;
     max-height: 80%;
     animation: transitionIn 1s;
     padding-top: 8vh;
+    padding-left: 20%;
 }
 .expContent {
     display: flex;
@@ -136,6 +140,8 @@ body {
         display: block;
         height: 200vh;
         width: 100vw;
+        padding-left: 15%;
+        padding-right: 15%;
     }
     .introContent {
         height: 90vh;
@@ -151,24 +157,36 @@ body {
         height: 50vh;
         width: 100vw;
         display: block;
+        text-align: center;
+    }
+    .imageWrap {
+        height: 90vh;
+        width: 100vw;
+        display: flex;
     }
     #introText {
-        font-size: 60px;
+        font-size: 55px;
         font-family: Aubrey;
         color: black;
         animation: transitionIn 1s;
         padding-top: 20vh;
     }
+    #introSubText {
+        font-size: 21px;
+        font-family: Poppins;
+        color: black;
+        animation: transitionIn 1s;
+    }
     #bodyText {
-        font-size: 22px;
-        font-family: Skia;
+        font-size: 14px;
+        font-family: Poppins;
         color: black;
         animation: transitionIn 1s;
     }
     .descriptionBox {
         display: block;
-        width: 380px;
-        justify-content: center;
+        width: 340px;
+        text-align: center;
         margin: auto;
     }
 }
@@ -194,6 +212,13 @@ body {
         height: 50vh;
         width: 100vw;
         display: block;
+        text-align: center;
+    }
+    .descriptionBox {
+        display: flex;
+        width: 50vh;
+        text-align: center;
+        margin: auto;
     }
     #introText {
         font-size: 9vh;
@@ -224,6 +249,7 @@ body {
         height: 50vh;
         width: 100vw;
         display: block;
+        text-align: center;
     }
     #introText {
         font-size: 9vh;
@@ -231,6 +257,13 @@ body {
         color: black;
         animation: transitionIn 1s;
         padding-top: 20vh;
+    }
+    .descriptionBox {
+        display: block;
+        width: 340px;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
     }
 }
 
@@ -254,6 +287,7 @@ body {
         height: 50vh;
         width: 100vw;
         display: block;
+        text-align: center;
     }
     #introText {
         font-size: 9vh;
@@ -261,5 +295,12 @@ body {
         color: black;
         animation: transitionIn 1s;
         padding-top: 20vh;
+    }
+    .descriptionBox {
+        display: block;
+        width: 50vh;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
     }
 }
