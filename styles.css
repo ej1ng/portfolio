@@ -10,17 +10,15 @@ body {
     margin: 0;
     background-color: white;
 }
-/* Navbar styles */
 .screen {
     width: 100vw;
-    height: 100vh;
     display: block;
     text-align: center;
 }
 .navBar {
     display: flex;
     width: 70vw;
-    height: 10vh;
+    height: 100px;
     align-items: center;
     justify-content: center;
     background-color: lavender;
@@ -30,20 +28,20 @@ body {
 .navOptions {
     display: flex;
     width: 55vw;
-    height: 7vh;
+    height: 40px;
     align-items: center;
     justify-content: right;
 }
 .navLogo {
     display: flex;
     width: 25vw;
-    height: 7vh;
+    height: 40px;
     align-items: center;
     justify-content: left;
 }
 #logo {
     display: block;
-    width: 4vh;
+    width: 40px;
 }
 .button {
     display: block;
@@ -51,7 +49,7 @@ body {
     color: #101769;
     text-align: center;
     text-decoration: none;
-    font-size: 3vh;
+    font-size: 26px;
     margin-left: 3vw;
     border-bottom: 2px solid;
     border-color: lavender;
@@ -64,63 +62,119 @@ body {
 /* Body styles */
 .contentBlock{
     display: block;
-    height: 200vh;
     width: 70vw;
+    height: 300vh;
     padding-left: 15%;
     padding-right: 15%;
 }
 .introContent {
-    height: 90vh;
     width: 70vw;
+    height: 860px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .rightBlock {
-    height: 90vh;
+    height: 860px;
     width: 35vw;
     display: block;
 }
 .leftBlock {
-    height: 90vh;
+    height: 860px;
     width: 35vw;
     text-align: left;
 }
 .descriptionBox {
     display: flex;
-    width: 50vh;
+    width: 500px;
     text-align: left;
 }
 #introText {
-    font-size: 9vh;
+    font-size: 88px;
     font-family: Aubrey;
     color: black;
     animation: transitionIn 1s;
-    padding-top: 28vh;
-    padding-bottom: 5vh;
+    padding-top: 280px;
+    padding-bottom: 40px;
 }
 #introSubText {
-    font-size: 2.5vh;
+    font-size: 26px;
     font-family: Poppins;
     color: black;
     animation: transitionIn 1s;
+}
+#caption {
+    font-size: 20px;
+    font-family: Poppins;
+    color: black;
+    animation: transitionIn 1s;
+    padding-left: 20%;
+}
+#plantIMG {
+    max-width: 80%;
+    max-height: 90%;
+    animation: transitionIn 1s;
+    padding-top: 100px;
+    padding-left: 20%;
+}
+.aboutMeContent {
+    display: flex;
+    width: 70vw;
+    background-color: black;
+}
+#labIMG {
+    max-width: 38%;
+    height: auto;
+    animation: transitionIn 1s;
+    position: absolute;
+    z-index: 1;
+}
+#guitarIMG {
+    display: block;
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+    animation: transitionIn 1s;
+    position: absolute;
+    z-index: 2;
+    margin-left: 20%;
+    margin-top: 34%;
+}
+.aboutMeBlock {
+    display: block;
+    height: 30vw;
+    width: 25vw;
+    background-color: lavender;
+    z-index: 3;
+    opacity: 0.8;
+    margin-top: 10%;
+    margin-left: 40%;
+    position: absolute;
+    padding: 2.5%;
+    text-align: left;
+    display: inline;
+}
+#header {
+    font-size: 4.5vw;
+    font-family: Aubrey;
+    color: black;
+    animation: transitionIn 1s;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+.bodyTextContainer {
+    display: inline;
+    height: 20vw;
+    width: 25vw;
+    text-align: left;
 }
 #bodyText {
-    font-size: 2vh;
+    font-size: 1.15vw;
     font-family: Poppins;
     color: black;
     animation: transitionIn 1s;
-    padding-left: 20%;
-}
-#me {
-    max-width: 80%;
-    max-height: 80%;
-    animation: transitionIn 1s;
-    padding-top: 8vh;
-    padding-left: 20%;
-}
-.expContent {
-    display: flex;
+    
 }
 
 @keyframes transitionIn {
@@ -177,7 +231,7 @@ body {
         color: black;
         animation: transitionIn 1s;
     }
-    #bodyText {
+    #caption {
         font-size: 14px;
         font-family: Poppins;
         color: black;
@@ -302,5 +356,50 @@ body {
         justify-content: center;
         text-align: center;
         margin: auto;
+    }
+}
+@media only screen and (min-width: 2000px) {
+    .introContent {
+        width: 70vw;
+        height: 1100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightBlock {
+        height: 1100px;
+        width: 35vw;
+        display: block;
+    }
+    .leftBlock {
+        height: 1100px;
+        width: 35vw;
+        text-align: left;
+    }
+    #introText {
+        font-size: 120px;
+        font-family: Aubrey;
+        color: black;
+        animation: transitionIn 1s;
+        padding-top: 400px;
+        padding-bottom: 40px;
+    }
+    #introSubText {
+        font-size: 30px;
+        font-family: Poppins;
+        color: black;
+        animation: transitionIn 1s;
+    }
+    #caption {
+        font-size: 25px;
+        font-family: Poppins;
+        color: black;
+        animation: transitionIn 1s;
+        padding-left: 20%;
+    }
+    .descriptionBox {
+        display: flex;
+        width: 700px;
+        text-align: left;
     }
 }
