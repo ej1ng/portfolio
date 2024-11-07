@@ -6,6 +6,10 @@
     font-family: 'Aubrey';
     src: url(../fonts/Aubrey.ttf);
 }
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
 body {
     margin: 0;
     background-color: white;
@@ -15,7 +19,7 @@ body {
     display: block;
     text-align: center;
 }
-.navBar {
+.navbar {
     display: flex;
     width: 70vw;
     height: 100px;
@@ -25,14 +29,14 @@ body {
     padding-left: 15%;
     padding-right: 15%;
 }
-.navOptions {
+.nav-options {
     display: flex;
     width: 55vw;
     height: 40px;
     align-items: center;
     justify-content: right;
 }
-.navLogo {
+.nav-logo {
     display: flex;
     width: 25vw;
     height: 40px;
@@ -60,36 +64,36 @@ body {
 }
 
 /* Body styles */
-.contentBlock{
+.content-block{
     display: block;
     width: 70vw;
     height: 300vh;
     padding-left: 15%;
     padding-right: 15%;
 }
-.introContent {
+.intro-content {
     width: 70vw;
     height: 860px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.rightBlock {
+.right-block {
     height: 860px;
     width: 35vw;
     display: block;
 }
-.leftBlock {
+.left-block {
     height: 860px;
     width: 35vw;
     text-align: left;
 }
-.descriptionBox {
+.description-box {
     display: flex;
     width: 500px;
     text-align: left;
 }
-#introText {
+#intro-text {
     font-size: 88px;
     font-family: Aubrey;
     color: black;
@@ -97,7 +101,7 @@ body {
     padding-top: 280px;
     padding-bottom: 40px;
 }
-#introSubText {
+#intro-subtext {
     font-size: 26px;
     font-family: Poppins;
     color: black;
@@ -110,26 +114,26 @@ body {
     animation: transitionIn 1s;
     padding-left: 20%;
 }
-#plantIMG {
+#plant-img {
     max-width: 80%;
     max-height: 90%;
     animation: transitionIn 1s;
     padding-top: 100px;
     padding-left: 20%;
 }
-.aboutMeContent {
+.about-me-content {
     display: flex;
     width: 70vw;
     background-color: black;
 }
-#labIMG {
+#lab-img {
     max-width: 38%;
     height: auto;
     animation: transitionIn 1s;
     position: absolute;
     z-index: 1;
 }
-#guitarIMG {
+#guitar-img {
     display: block;
     max-width: 30%;
     height: auto;
@@ -140,7 +144,7 @@ body {
     margin-left: 20%;
     margin-top: 34%;
 }
-.aboutMeBlock {
+.about-me-block {
     display: block;
     height: 30vw;
     width: 25vw;
@@ -155,7 +159,7 @@ body {
     display: inline;
 }
 #header {
-    font-size: 4.5vw;
+    font-size: 4.5em;
     font-family: Aubrey;
     color: black;
     animation: transitionIn 1s;
@@ -163,13 +167,7 @@ body {
     margin-top: 5%;
     margin-bottom: 7%;
 }
-.bodyTextContainer {
-    display: inline;
-    height: 20vw;
-    width: 25vw;
-    text-align: left;
-}
-#bodyText {
+.body-text {
     font-size: 1.15vw;
     font-family: Poppins;
     color: black;
@@ -190,47 +188,7 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-    .contentBlock{
-        display: block;
-        height: 200vh;
-        width: 100vw;
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-    .introContent {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .rightBlock {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .leftBlock {
-        height: 50vh;
-        width: 100vw;
-        display: block;
-        text-align: center;
-    }
-    .imageWrap {
-        height: 90vh;
-        width: 100vw;
-        display: flex;
-    }
-    #introText {
-        font-size: 55px;
-        font-family: Aubrey;
-        color: black;
-        animation: transitionIn 1s;
-        padding-top: 20vh;
-    }
-    #introSubText {
-        font-size: 21px;
-        font-family: Poppins;
-        color: black;
-        animation: transitionIn 1s;
-    }
+  
     #caption {
         font-size: 14px;
         font-family: Poppins;
