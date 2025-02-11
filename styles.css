@@ -176,6 +176,7 @@ body {
     padding-top: 0.5%;
     padding-left: 3%;
     padding-right: 3%;
+    padding-bottom: 5%;
     background-color: lavender;
 }
 .projects-row {
@@ -228,7 +229,9 @@ body {
     color: #101769;
     text-align: left;
 }
-
+.experiences-block {
+    display: block;
+}
 
 @keyframes transitionIn {
     from {
