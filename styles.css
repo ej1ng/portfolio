@@ -19,7 +19,6 @@ body {
     z-index: 1;
 }
 .screen {
-    width: 100vw;
     display: block;
     text-align: center;
 }
@@ -65,26 +64,26 @@ body {
     border-color: lavender;
 }
 .button:hover {
-    color: #535895;
+    color: #757cc9;
     border-bottom: 2px solid;
+    font-weight: bold;
 }
 
 /* Body styles */
 .content-block{
     display: block;
-    width: 70vw;
-    height: auto;
-    padding-left: 15%;
-    padding-right: 15%;
     animation: transitionIn 1s;
 }
 .intro-content {
     width: 70vw;
     height: 840px;
     display: flex;
-    padding-top: 6.25%;
+    padding-top: 60px;
+    padding-bottom: 32px;
     align-items: center;
     justify-content: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 .right-block {
     height: 840px;
@@ -110,7 +109,7 @@ body {
     padding-bottom: 40px;
 }
 #intro-subtext {
-    font-size: 26px;
+    font-size: 24px;
     font-family: Poppins;
     color: black;
 }
@@ -130,7 +129,9 @@ body {
     display: flex;
     width: 70vw;
     height: 65vw;
-    padding-top: 5%;
+    padding-top: 60px;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 #lab-img {
     max-width: 38%;
@@ -140,7 +141,7 @@ body {
 }
 #guitar-img {
     display: block;
-    max-width: 30%;
+    max-width: 28.5%;
     height: auto;
     object-fit: contain;
     position: absolute;
@@ -166,9 +167,8 @@ body {
     font-size: 4.5em;
     font-family: Aubrey;
     color: black;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 .body-text {
     font-size: 1.15vw;
@@ -176,25 +176,27 @@ body {
     color: black;
 }
 .projects-block {
-    display: block;
-    width: 65.8vw;
-    height: auto;
-    align-items: center;
-    padding-top: 6.25%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 3%;
+    background-color: #a6ace0;
+    height: 58vw;
+    margin: auto;
+}
+.filler {
+    height: 1px;
+    padding-top: 59px;
+    background-color: white;
 }
 .projects-row {
     display: flex;
-    width: 65.8vw;
+    width: 70vw;
     height: 27vw;
     padding-bottom: 4%;
     justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 .project-container {
     display: block;
-    width: 18vw;
+    width: 19vw;
     height: auto;
     background-color: white;
     border: 1.5px solid #101769;
@@ -203,15 +205,19 @@ body {
     padding-left: 2%;
     padding-bottom: 2%;
     padding-top: 1%;
+    transition: transform 0.3s ease;
+}
+.project-container:hover {
+    box-shadow: 12px 12px 12px #101769;
+    transform: rotate(2deg) scale(1.05);
 }
 .project-upper {
     display: flex;
     text-align: left;
     align-items: center;
-    width: 100%;
     height: 5vw;
     margin-bottom: 5%;
-    border-bottom: 1.5px solid #101769
+    border-bottom: 1.5px solid #101769;
 }
 #project-logo {
     display: block;
@@ -227,10 +233,10 @@ body {
     width: 100%;
     height: 12vw;
     border-radius: 20px;
-    border: 1.5px solid #101769
+    border: 1.5px solid #101769;
 }
 #project-text {
-    font-size: 14px;
+    font-size: 0.85em;
     font-family: Poppins;
     color: #101769;
     text-align: left;
@@ -239,6 +245,26 @@ body {
     display: block;
     height: 10vw;
     text-align: left;
+}
+.contact-block {
+    display: block;
+    width: 70vw;
+    text-align: left;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.footer {
+    height: 10vw;
+    background-color: lavender;
+}
+#footer-text {
+    font-size: 1.15vw;
+    font-family: Poppins;
+    color: black;
+    padding-top: 5%;
+    font-weight: bold;
 }
 
 @keyframes transitionIn {
