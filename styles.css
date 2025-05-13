@@ -118,7 +118,7 @@ body {
     font-family: Poppins;
     color: black;
     padding-left: 20%;
-    animation: ;
+
 }
 #plant-img {
     max-width: 80%;
@@ -211,7 +211,7 @@ body {
 }
 .project-container:hover {
     box-shadow: 12px 12px 12px #101769;
-    transform: rotate(2deg) scale(1.02);
+    transform: rotate(2deg) scale(1.01);
 }
 .project-upper {
     display: flex;
@@ -220,26 +220,30 @@ body {
     height: 5vw;
     margin-bottom: 5%;
     border-bottom: 1.5px solid #101769;
+    transition: transform 0.3s ease;
 }
 #project-logo {
     display: block;
     width: 35px;
     margin-right: 19px;
+    transition: transform 0.2s ease;
+}
+#project-logo:hover {
+    transform: scale(1.08);
 }
 #project-title {
     font-size: 16px;
     font-family: Poppins;
     color: black;
 }
+#project-title:hover {
+    color: #757cc9;
+}
 #project-image {
     width: 100%;
     height: 12vw;
     border-radius: 20px;
     border: 1.5px solid #101769;
-    transition: transform 0.3s ease;
-}
-#project-image:hover {
-    transform: scale(1.02);
 }
 #project-text {
     font-size: 0.85em;
@@ -287,175 +291,19 @@ body {
 
 @media only screen and (max-width: 600px) {
   
-    #caption {
-        font-size: 14px;
-        font-family: Poppins;
-        color: black;
-        animation: transitionIn 1s;
-    }
-    .descriptionBox {
-        display: block;
-        width: 340px;
-        text-align: center;
-        margin: auto;
-    }
 }
 
-
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-    .contentBlock{
-        display: block;
-        height: 200vh;
-        width: 100vw;
-    }
-    .introContent {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .rightBlock {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .leftBlock {
-        height: 50vh;
-        width: 100vw;
-        display: block;
-        text-align: center;
-    }
-    .descriptionBox {
-        display: flex;
-        width: 50vh;
-        text-align: center;
-        margin: auto;
-    }
-    #introText {
-        font-size: 9vh;
-        font-family: Aubrey;
-        color: black;
-        animation: transitionIn 1s;
-        padding-top: 20vh;
-    }
+   
 }
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-    .contentBlock{
-        display: block;
-        height: 200vh;
-        width: 100vw;
-    }
-    .introContent {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .rightBlock {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .leftBlock {
-        height: 50vh;
-        width: 100vw;
-        display: block;
-        text-align: center;
-    }
-    #introText {
-        font-size: 9vh;
-        font-family: Aubrey;
-        color: black;
-        animation: transitionIn 1s;
-        padding-top: 20vh;
-    }
-    .descriptionBox {
-        display: block;
-        width: 340px;
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-    }
+  
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    .contentBlock{
-        display: block;
-        height: 200vh;
-        width: 100vw;
-    }
-    .introContent {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .rightBlock {
-        height: 90vh;
-        width: 100vw;
-        display: block;
-    }
-    .leftBlock {
-        height: 50vh;
-        width: 100vw;
-        display: block;
-        text-align: center;
-    }
-    #introText {
-        font-size: 9vh;
-        font-family: Aubrey;
-        color: black;
-        animation: transitionIn 1s;
-        padding-top: 20vh;
-    }
-    .descriptionBox {
-        display: block;
-        width: 50vh;
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-    }
+    
 }
 @media only screen and (min-width: 2000px) {
-    .introContent {
-        width: 70vw;
-        height: 1100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .rightBlock {
-        height: 1100px;
-        width: 35vw;
-        display: block;
-    }
-    .leftBlock {
-        height: 1100px;
-        width: 35vw;
-        text-align: left;
-    }
-    #introText {
-        font-size: 120px;
-        font-family: Aubrey;
-        color: black;
-        animation: transitionIn 1s;
-        padding-top: 400px;
-        padding-bottom: 40px;
-    }
-    #introSubText {
-        font-size: 30px;
-        font-family: Poppins;
-        color: black;
-        animation: transitionIn 1s;
-    }
-    #caption {
-        font-size: 25px;
-        font-family: Poppins;
-        color: black;
-        animation: transitionIn 1s;
-        padding-left: 20%;
-    }
-    .descriptionBox {
-        display: flex;
-        width: 700px;
-        text-align: left;
-    }
+   
 }
