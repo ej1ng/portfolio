@@ -3,15 +3,15 @@ html {
 }
 @font-face {
     font-family: 'Outfit';
-    src: url(../fonts/Outfit-Light.ttf);
+    src: url(fonts/Outfit-Light.ttf);
 }
 @font-face {
     font-family: 'Aubrey';
-    src: url(../fonts/Aubrey.ttf);
+    src: url(fonts/Aubrey.ttf);
 }
 @font-face {
     font-family: 'Poppins';
-    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+    src: url(fonts/Poppins/Poppins-Regular.ttf);
 }
 body {
     margin: 0;

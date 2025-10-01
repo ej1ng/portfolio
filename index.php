@@ -10,7 +10,7 @@
 
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="http://example.com/favicon.png">
-        <link rel="icon" type="image/png" href="/images/favicon.png">
+        <link rel="icon" type="image/png" href="images/favicon.png">
         
 
     </head>
@@ -21,7 +21,7 @@
             <nav class="navbar">
                 <!--Home logo-->
                 <div class="nav-logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img id="logo" src="images/logo.png">
                     </a>
                 </div>
