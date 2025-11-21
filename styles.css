@@ -17,6 +17,7 @@ body {
     margin: 0;
     background-color: white;
     z-index: 1;
+    font-size: clamp(14px, 1vw + 0.5rem, 18px);
 }
 .screen {
     display: block;
@@ -58,7 +59,7 @@ body {
     color: #101769;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
+    font-size: clamp(14px, 1.2vw, 18px);
     margin-left: 3vw;
     border-bottom: 2px solid;
     border-color: lavender;
@@ -102,19 +103,19 @@ body {
     text-align: left;
 }
 #intro-text {
-    font-size: 88px;
+    font-size: clamp(48px, 6vw, 88px);
     font-family: Aubrey;
     color: black;
     padding-top: 280px;
     padding-bottom: 40px;
 }
 #intro-subtext {
-    font-size: 24px;
+    font-size: clamp(18px, 1.8vw, 24px);
     font-family: Poppins;
     color: black;
 }
 #caption {
-    font-size: 20px;
+    font-size: clamp(14px, 1.5vw, 20px);
     font-family: Poppins;
     color: black;
     padding-left: 20%;
@@ -130,8 +131,10 @@ body {
 .about-me-block {
     display: flex;
     width: 70vw;
-    height: 65vw;
+    height: auto;
+    min-height: 65vw;
     padding-top: 60px;
+    padding-bottom: 60px;
     margin-left: 15vw;
     margin-right: 15vw;
 }
@@ -153,7 +156,8 @@ body {
 }
 .about-me-content {
     display: block;
-    height: 30vw;
+    height: auto;
+    min-height: 30vw;
     width: 25vw;
     background-color: lavender;
     z-index: 3;
@@ -166,20 +170,24 @@ body {
     display: inline;
 }
 #header {
-    font-size: 4.5em;
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
     font-family: Aubrey;
     color: black;
     margin-top: 4%;
     margin-bottom: 4%;
 }
 .body-text {
-    font-size: 1.15vw;
+    font-size: clamp(16px, 1.15vw, 20px);
     font-family: Poppins;
     color: black;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .projects-block {
     background-color: #a6ace0;
-    height: 100vw;
+    height: auto;
+    min-height: 100vw;
+    padding-bottom: 60px;
     margin: auto;
 }
 .filler {
@@ -190,9 +198,11 @@ body {
 .projects-row {
     display: flex;
     width: 70vw;
-    height: 27vw;
+    height: auto;
+    min-height: 27vw;
     padding-bottom: 4%;
     justify-content: space-between;
+    align-items: stretch;
     margin-left: 15vw;
     margin-right: 15vw;
 }
@@ -217,7 +227,8 @@ body {
     display: flex;
     text-align: left;
     align-items: center;
-    height: 5vw;
+    height: auto;
+    min-height: 5vw;
     margin-bottom: 5%;
     border-bottom: 1.5px solid #101769;
     transition: transform 0.3s ease;
@@ -232,9 +243,11 @@ body {
     transform: scale(1.08);
 }
 #project-title {
-    font-size: 16px;
+    font-size: clamp(14px, 1.2vw, 16px);
     font-family: Poppins;
     color: black;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 #project-title:hover {
     color: #757cc9;
@@ -246,10 +259,12 @@ body {
     border: 1.5px solid #101769;
 }
 #project-text {
-    font-size: 0.85em;
+    font-size: clamp(13px, 0.85vw, 16px);
     font-family: Poppins;
     color: #101769;
     text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .experiences-block {
     display: block;
@@ -270,7 +285,7 @@ body {
     background-color: lavender;
 }
 #footer-text {
-    font-size: 1.15vw;
+    font-size: clamp(16px, 1.15vw, 20px);
     font-family: Poppins;
     color: black;
     padding-top: 5%;
@@ -288,22 +303,471 @@ body {
     }
 }
 
-
+/* mobile - up to 600px */
 @media only screen and (max-width: 600px) {
-  
+    .navbar {
+        width: 90vw;
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 50px;
+    }
+    .nav-logo {
+        width: 30vw;
+    }
+    .nav-options {
+        width: 60vw;
+        justify-content: flex-end;
+    }
+    .button {
+        font-size: 14px;
+        margin-left: 4vw;
+    }
+    .intro-content {
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-top: 80px;
+    }
+    .left-block, .right-block {
+        width: 90vw;
+        height: auto;
+    }
+    .left-block {
+        text-align: center;
+    }
+    #intro-text {
+        font-size: 48px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    #intro-subtext {
+        font-size: 18px;
+    }
+    .description-box {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    #plant-img {
+        padding-left: 0;
+        padding-top: 0;
+        max-width: 100%;
+    }
+    #caption {
+        font-size: 14px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .about-me-block {
+        width: 90vw;
+        height: auto;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 40px;
+    }
+    #lab-img, #guitar-img {
+        position: relative;
+        max-width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+    #guitar-img {
+        margin-top: 10px;
+        margin-left: auto;
+    }
+    .about-me-content {
+        position: relative;
+        width: 80vw;
+        height: auto;
+        margin: 20px auto;
+        padding: 5%;
+    }
+    #header {
+        font-size: 2.5em;
+    }
+    .body-text {
+        font-size: 16px;
+    }
+    .projects-block {
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .projects-row {
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .project-container {
+        width: 80vw;
+        margin-bottom: 30px;
+        padding: 4%;
+    }
+    .project-upper {
+        height: auto;
+        min-height: 60px;
+    }
+    #project-image {
+        height: 50vw;
+    }
+    #project-text {
+        font-size: 14px;
+    }
+    .contact-block {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .footer {
+        height: auto;
+        padding: 30px 0;
+    }
+    #footer-text {
+        font-size: 16px;
+        padding-top: 0;
+    }
 }
 
+/* 601px to 768px */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-   
-}
-
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  
-}
-
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .navbar {
+        width: 85vw;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+    .button {
+        font-size: 16px;
+        margin-left: 2.5vw;
+    }
+    .intro-content {
+        flex-direction: column;
+        width: 85vw;
+        height: auto;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+    }
+    .left-block, .right-block {
+        width: 85vw;
+        height: auto;
+    }
+    .left-block {
+        text-align: center;
+    }
+    #intro-text {
+        font-size: 64px;
+        padding-top: 60px;
+    }
     
+    #intro-subtext {
+        font-size: 20px;
+    }
+    .description-box {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #plant-img {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    #caption {
+        padding-left: 0;
+        text-align: center;
+    }
+    .about-me-block {
+        width: 85vw;
+        height: auto;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+    #lab-img, #guitar-img {
+        position: relative;
+        max-width: 80%;
+        margin: 15px auto;
+        display: block;
+    }
+    .about-me-content {
+        position: relative;
+        width: 70vw;
+        height: auto;
+        margin: 20px auto;
+        padding: 4%;
+    }
+    #header {
+        font-size: 3em;
+    }
+    .body-text {
+        font-size: 18px;
+    }
+    .projects-block {
+        height: auto;
+        padding-bottom: 60px;
+    }
+    .projects-row {
+        flex-direction: column;
+        width: 85vw;
+        height: auto;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+    }
+    .project-container {
+        width: 75vw;
+        margin-bottom: 30px;
+        padding: 3%;
+    }
+    .project-upper {
+        height: auto;
+        min-height: 70px;
+    }
+    #project-image {
+        height: 45vw;
+    }
+    #project-text {
+        font-size: 15px;
+    }
+    .contact-block {
+        width: 85vw;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+    }
+    .footer {
+        height: auto;
+        padding: 40px 0;
+    }
+    #footer-text {
+        font-size: 18px;
+    }
 }
+
+/* 769px to 992px */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .navbar {
+        width: 85vw;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+    .button {
+        font-size: 16px;
+        margin-left: 2.5vw;
+    }
+    .intro-content {
+        flex-direction: column;
+        width: 85vw;
+        height: auto;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+    }
+    .left-block, .right-block {
+        width: 85vw;
+        height: auto;
+    }
+    .left-block {
+        text-align: center;
+    }
+    #intro-text {
+        font-size: 64px;
+        padding-top: 60px;
+    }
+    #intro-subtext {
+        font-size: 20px;
+    }
+    .description-box {
+        justify-content: center;
+    }
+    #plant-img {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    #caption {
+        padding-left: 0;
+        text-align: center;
+    }
+    .description-box {
+        width: 100%;
+    }
+    .about-me-block {
+        width: 85vw;
+        height: auto;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+    #lab-img, #guitar-img {
+        position: relative;
+        max-width: 80%;
+        margin: 15px auto;
+        display: block;
+    }
+    .about-me-content {
+        position: relative;
+        width: 70vw;
+        height: auto;
+        margin: 20px auto;
+        padding: 4%;
+    }
+    #header {
+        font-size: 3em;
+    }
+    .body-text {
+        font-size: 18px;
+    }
+    .projects-block {
+        height: auto;
+        padding-bottom: 80px;
+    }
+    .projects-row {
+        flex-direction: column;
+        width: 85vw;
+        height: auto;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+    }
+    .project-container {
+        width: 75vw;
+        margin-bottom: 30px;
+        padding: 3%;
+    }
+    .project-upper {
+        height: auto;
+        min-height: 70px;
+    }
+    #project-image {
+        height: 45vw;
+    }
+    #project-text {
+        font-size: 15px;
+    }
+    .contact-block {
+        width: 85vw;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+    }
+    .footer {
+        height: auto;
+        padding: 40px 0;
+    }
+    #footer-text {
+        font-size: 18px;
+    }
+}
+
+/* 993px to 1200px */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .navbar {
+        width: 75vw;
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
+    .button {
+        font-size: 18px;
+    }
+    .intro-content {
+        width: 75vw;
+        margin-left: 12.5vw;
+        margin-right: 12.5vw;
+    }
+    #plant-img {
+        max-width: 80%;
+        max-height: 90%;
+    }
+    .description-box {
+        width: 90%;
+        max-width: 500px;
+    }
+    .about-me-block {
+        width: 75vw;
+        margin-left: 12.5vw;
+        margin-right: 12.5vw;
+    }
+    .projects-row {
+        width: 75vw;
+        margin-left: 12.5vw;
+        margin-right: 12.5vw;
+    }
+    .project-container {
+        width: 20vw;
+    }
+    .contact-block {
+        width: 75vw;
+        margin-left: 12.5vw;
+        margin-right: 12.5vw;
+    }
+}
+
+/* 1201px to 1999px */
+@media only screen and (min-width: 1201px) and (max-width: 1999px) {
+    .button {
+        font-size: 18px;
+    }
+    #plant-img {
+        max-width: 80%;
+        max-height: 90%;
+    }
+    .description-box {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/* 2000px and up */
 @media only screen and (min-width: 2000px) {
-   
+    .navbar {
+        height: 80px;
+    }
+    .button {
+        font-size: 18px;
+    }
+    #logo {
+        width: 35px;
+    }
+    #intro-text {
+        font-size: 120px;
+    }
+    #intro-subtext {
+        font-size: 32px;
+    }
+    #caption {
+        font-size: 26px;
+    }
+    #plant-img {
+        max-width: 80%;
+        max-height: 90%;
+    }
+    .description-box {
+        width: 90%;
+        max-width: 500px;
+    }
+    #header {
+        font-size: 5.5em;
+    }
+    .body-text {
+        font-size: 22px;
+    }
+    #project-title {
+        font-size: 20px;
+    }
+    #project-logo {
+        width: 45px;
+    }
+    #project-text {
+        font-size: 1em;
+    }
+    #footer-text {
+        font-size: 22px;
+    }
+    .project-container {
+        border-radius: 30px;
+    }
+    #project-image {
+        border-radius: 25px;
+    }
 }
