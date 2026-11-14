@@ -1,0 +1,606 @@
+/* =========================================================
+   Fonts
+   ========================================================= */
+@font-face {
+    font-family: "Aubrey";
+    src: url(../fonts/Aubrey.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* =========================================================
+   Design tokens - change a color/font/spacing here once
+   ========================================================= */
+:root {
+    /* colors */
+    --color-lavender: lavender;
+    --color-purple: #a6ace0;
+    --color-purple-dark: #757cc9;
+    --color-navy: #101769;
+    --color-text: black;
+    --color-bg: white;
+
+    /* fonts */
+    --font-display: "Aubrey", serif;
+    --font-body: "Poppins", sans-serif;
+
+    /* layout: --gutter is the empty space on the left and right of the page.
+       Content is everything in between. Breakpoints below only change --gutter. */
+    --gutter: 15vw;
+    --content-width: calc(100vw - 2 * var(--gutter));
+    --nav-height: 60px;
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    font-size: clamp(14px, 1vw + 0.5rem, 18px);
+    text-align: center;
+}
+
+/* Shared text styles */
+.section-header {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+    font-weight: normal;
+    color: var(--color-text);
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.body-text {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.15vw, 20px);
+    color: var(--color-text);
+    overflow-wrap: break-word;
+}
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+.navbar {
+    position: fixed;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--content-width);
+    height: var(--nav-height);
+    padding: 0 var(--gutter);
+    background-color: var(--color-lavender);
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    width: 25vw;
+    height: 40px;
+}
+.logo {
+    display: block;
+    width: 25px;
+}
+.nav-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 55vw;
+    height: 40px;
+}
+.button {
+    display: block;
+    margin-left: 3vw;
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--color-navy);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-lavender);
+}
+.button:hover {
+    color: var(--color-purple-dark);
+    border-bottom-color: currentColor;
+    font-weight: bold;
+}
+
+/* =========================================================
+   Intro
+   ========================================================= */
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--content-width);
+    height: 840px;
+    margin: 0 var(--gutter);
+    padding-top: 60px;
+    padding-bottom: 32px;
+}
+.left-block,
+.right-block {
+    width: 35vw;
+    height: 840px;
+}
+.left-block {
+    text-align: left;
+}
+.right-block {
+    animation: transitionIn 1s;
+}
+.intro-text {
+    margin: 0;
+    padding-top: 280px;
+    padding-bottom: 40px;
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: normal;
+    color: var(--color-text);
+}
+.description-box {
+    display: flex;
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+}
+.intro-subtext {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: clamp(18px, 1.8vw, 24px);
+    color: var(--color-text);
+}
+.plant-img {
+    max-width: 80%;
+    max-height: 90%;
+    padding-top: 100px;
+    padding-left: 20%;
+    animation: transitionIn 1s;
+}
+.caption {
+    padding-left: 20%;
+    font-family: var(--font-body);
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: var(--color-text);
+}
+
+/* =========================================================
+   About me
+   ========================================================= */
+.about-me-block {
+    display: flex;
+    width: var(--content-width);
+    min-height: 65vw;
+    margin: 0 var(--gutter);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.lab-img {
+    position: absolute;
+    z-index: 1;
+    max-width: 38%;
+    height: auto;
+}
+.guitar-img {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    max-width: 28.5%;
+    height: auto;
+    object-fit: contain;
+    margin-left: 20%;
+    margin-top: 34%;
+}
+.about-me-content {
+    position: absolute;
+    z-index: 3;
+    width: 25vw;
+    min-height: 30vw;
+    margin-top: 10%;
+    margin-left: 40%;
+    padding: 2.5%;
+    background-color: var(--color-lavender);
+    opacity: 0.8;
+    text-align: left;
+}
+
+/* =========================================================
+   Projects (cards are built by assets/js/main.js)
+   ========================================================= */
+.projects-block {
+    display: flow-root; /* keeps the header's margin inside the purple background */
+    margin-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--color-purple);
+    scroll-margin-top: var(--nav-height); /* nav link doesn't hide the section under the navbar */
+}
+.projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    row-gap: 3%;
+    width: var(--content-width);
+    margin: 0 var(--gutter);
+}
+.project-container {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    box-sizing: border-box;
+    width: 45%;
+    margin: 1.5%;
+    padding: 2%;
+    background-color: var(--color-bg);
+    border-radius: 15px;
+    box-shadow: 6px 6px 0 var(--color-purple-dark);
+    /* hidden until scrolled into view (see main.js) */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.project-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.project-container:hover {
+    transform: translateY(-5px);
+}
+.project-image-wrapper {
+    flex-shrink: 0;
+    width: 35%;
+}
+.project-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.project-title-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.project-logo {
+    display: block;
+    width: 35px;
+    margin-right: 19px;
+    transition: transform 0.2s ease;
+}
+.project-logo:hover {
+    transform: scale(1.08);
+}
+.project-title {
+    font-family: var(--font-body);
+    font-size: clamp(18px, 1.8vw, 22px);
+    font-weight: 600;
+    color: var(--color-text);
+    overflow-wrap: break-word;
+}
+.project-title:hover {
+    color: var(--color-purple-dark);
+}
+.project-text {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: clamp(12px, 0.75vw, 14px);
+    line-height: 1.5;
+    color: var(--color-navy);
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+/* =========================================================
+   Contact + footer
+   ========================================================= */
+.contact-block {
+    width: var(--content-width);
+    margin: 5% var(--gutter);
+    text-align: left;
+    scroll-margin-top: var(--nav-height);
+}
+.contact-block a {
+    color: inherit;
+}
+.footer {
+    height: 10vw;
+    background-color: var(--color-lavender);
+}
+.footer-text {
+    padding-top: 5%;
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.15vw, 20px);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-50deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+/* =========================================================
+   Responsive - largest to smallest. Each block only lists what changes.
+   ========================================================= */
+
+/* up to 1499px: project cards take a full row */
+@media (max-width: 1499px) {
+    .project-container {
+        width: 100%;
+    }
+}
+
+/* up to 1200px: slightly narrower side gutters */
+@media (max-width: 1200px) {
+    :root {
+        --gutter: 12.5vw;
+    }
+}
+
+/* up to 992px (tablet): everything stacks into one column */
+@media (max-width: 992px) {
+    :root {
+        --gutter: 7.5vw;
+    }
+    .button {
+        font-size: 16px;
+        margin-left: 2.5vw;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-block,
+    .right-block {
+        width: var(--content-width);
+        height: auto;
+    }
+    .left-block {
+        text-align: center;
+    }
+    .intro-text {
+        font-size: 64px;
+        padding-top: 60px;
+    }
+    .intro-subtext {
+        font-size: 20px;
+    }
+    .description-box {
+        width: 100%;
+        max-width: none;
+        justify-content: center;
+        text-align: center;
+    }
+    .plant-img {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .caption {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-me-block {
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+    .lab-img,
+    .guitar-img {
+        position: relative;
+        display: block;
+        max-width: 80%;
+        margin: 15px auto;
+    }
+    .about-me-content {
+        position: relative;
+        width: 70vw;
+        margin: 20px auto;
+        padding: 4%;
+    }
+    .section-header {
+        font-size: 3em;
+    }
+    .body-text {
+        font-size: 18px;
+    }
+
+    .projects-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .project-container {
+        flex-direction: column;
+        width: 90%;
+        margin-bottom: 25px;
+        padding: 3%;
+    }
+    .project-image-wrapper,
+    .project-content {
+        width: 100%;
+    }
+    .project-text {
+        font-size: 15px;
+    }
+
+    .footer {
+        height: auto;
+        padding: 40px 0;
+    }
+    .footer-text {
+        font-size: 18px;
+    }
+}
+
+/* 769px - 992px: project cards keep image beside text */
+@media (min-width: 769px) and (max-width: 992px) {
+    .projects-block {
+        padding-bottom: 80px;
+    }
+    .projects-row {
+        gap: 30px;
+    }
+    .project-container {
+        flex-direction: row;
+        width: 100%;
+        padding: 2.5%;
+    }
+    .project-image-wrapper {
+        width: 40%;
+    }
+    .project-content {
+        width: 60%;
+    }
+}
+
+/* up to 600px (phone) */
+@media (max-width: 600px) {
+    :root {
+        --gutter: 5vw;
+        --nav-height: 50px;
+    }
+    .nav-logo {
+        width: 30vw;
+    }
+    .nav-options {
+        width: 60vw;
+    }
+    .button {
+        font-size: 14px;
+        margin-left: 4vw;
+    }
+
+    .intro-content {
+        padding-top: 80px;
+    }
+    .intro-text {
+        font-size: 48px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .intro-subtext {
+        font-size: 18px;
+    }
+    .plant-img {
+        max-width: 100%;
+        padding-top: 0;
+    }
+    .caption {
+        font-size: 14px;
+    }
+
+    .about-me-block {
+        position: relative;
+    }
+    .lab-img,
+    .guitar-img {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+    .about-me-content {
+        width: 80vw;
+        padding: 5%;
+    }
+    .section-header {
+        font-size: 2.5em;
+    }
+    .body-text {
+        font-size: 16px;
+    }
+
+    .projects-block {
+        padding-bottom: 40px;
+    }
+    .projects-row {
+        gap: 20px;
+    }
+    .project-container {
+        margin-bottom: 20px;
+        padding: 4%;
+    }
+    .project-text {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+    .footer-text {
+        font-size: 16px;
+        padding-top: 0;
+    }
+}
+
+/* 2000px and up: bigger type for very large screens */
+@media (min-width: 2000px) {
+    :root {
+        --nav-height: 80px;
+    }
+    .logo {
+        width: 35px;
+    }
+    .intro-text {
+        font-size: 120px;
+    }
+    .intro-subtext {
+        font-size: 32px;
+    }
+    .caption {
+        font-size: 26px;
+    }
+    .section-header {
+        font-size: 5.5em;
+    }
+    .body-text {
+        font-size: 22px;
+    }
+    .project-container {
+        border-radius: 30px;
+    }
+    .project-image {
+        border-radius: 25px;
+    }
+    .project-logo {
+        width: 45px;
+    }
+    .project-title {
+        font-size: 20px;
+    }
+    .project-text {
+        font-size: 1em;
+    }
+    .footer-text {
+        font-size: 22px;
+    }
+}

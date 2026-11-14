@@ -1,227 +1,82 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
     <head>
-		<meta charset="UTF-8" />
-        <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Emily Jing - computer engineering student at the University of Waterloo. Projects, about me, and contact.">
 
         <title>Emily Jing</title>
 
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="http://example.com/favicon.png">
-        <link rel="icon" type="image/png" href="images/favicon.png">
-        
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        <link rel="stylesheet" href="assets/css/styles.css">
 
+        <!-- projects.js holds the project data; main.js renders it. "defer" runs them after the HTML is parsed, in order. -->
+        <script src="assets/js/projects.js" defer></script>
+        <script src="assets/js/main.js" defer></script>
     </head>
 
     <body>
-        <div class="screen">
-            <!--Navbar container-->
-            <nav class="navbar">
-                <!--Home logo-->
-                <div class="nav-logo">
-                    <a href="index.html">
-                        <img id="logo" src="images/logo.png">
-                    </a>
-                </div>
-                <!--Button options-->
-                <div class="nav-options">
-                    <a href="#about-me"class="button">
-                        about me
-                    </a>
-                    <a href="#projects"class="button">
-                        projects
-                    </a>
-                    <a href="#contact"class="button">
-                        contact
-                    </a>
-                </div>
-            </nav>
-            
-            <!--Body information-->
-            <section class="content-block">
-                <!--Introduction section-->
-                <div class="intro-content">
-                    <!--Description-->
-                    <div class="left-block">
-                        <div id="intro-text">
-                            HI, I'M EMILY !
-                        </div>
-                        <div class="description-box" id="intro-subtext">
-                            an 18 year old with a love for exploring and learning new things!
-                        </div>
-                    </div>
-                    <!--Awesome image-->
-                    <div class="right-block">
-                        <img id="plant-img" src="images/plant.png">
-                        <p id="caption">SHAD McGill 2023 - McGill MacDonald Campus</p>
-                    </div>
-                </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a class="nav-logo" href="#">
+                <img class="logo" src="assets/images/logo.png" alt="Home">
+            </a>
+            <div class="nav-options">
+                <a href="#about-me" class="button">about me</a>
+                <a href="#projects" class="button">projects</a>
+                <a href="#contact" class="button">contact</a>
+            </div>
+        </nav>
 
-                <!--About me section-->
-                <div class="about-me-block" id="about-me">
-                    <!--About me writing-->
-                    <div class="about-me-content">
-                        <p id="header">about me</p>
-                        <div class="body-text">
-                            <p>hey! i'm emily jing, studying <strong> computer engineering @ university of waterloo</strong>.<p>
-                            <p>i am very interested in <strong>machine learning & neural networks</strong>, as well as the the intersection between computer science, engineering, business, and healthcare.<p>
-                            <p>along with my love for hackathons, you'll often catch me arranging sheet music of songs I love on the guitar or piano, attending dance workshops, swimming, or biking around in the nature ⛰️🚴🏊🌲 #grasstoucher</p>
-                        </div>
-                    </div>
-                    <!--Images-->
-                    <img id="lab-img" src="images/lab.png">
-                    <img id="guitar-img" src="images/guitar.png">
-                </div>
-                
-                <!--Projects section-->
-                <div class="projects-block" id="projects">
-                    <div class="filler"></div>
-
-                    <p id="header">projects</p>
-
-
-                    <div class="projects-row">
-                        <!--Thermasense!-->
-                        <div class="project-container">
-                            <div class="project-image-wrapper">
-                                <img id="project-image" src="images/thermasense.png">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-title-section">
-                                    <img id="project-logo" src="images/thermasense-logo.png">
-                                    <a href="https://github.com/juliejyyang/thermasense" id="project-title">Thermasense.</a>
-                                </div>
-                                <div id="project-text">
-                                    <p>An ML-powered hospital delirium-risk monitoring system using an Arduino
-                                    to monitor patient temperature variability in real-time. Automatically classify patients
-                                    into risk tiers and notifies nurses for clinical decision-making.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--SnapCAD!-->
-                        <div class="project-container">
-                            <div class="project-image-wrapper">
-                                <img id="project-image" src="images/snapcad.png">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-title-section">
-                                    <img id="project-logo" src="images/snapcad-logo.svg">
-                                    <a href="https://github.com/ej1ng/snapCAD" id="project-title">SnapCAD</a>
-                                </div>
-                                <div id="project-text">
-                                    <p>A website that converts your 2D images into detailed, ready-to-use 3D models as
-                                    downloaded GLB files in seconds. Perfect for designers, developers, and creators.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--FlappyDog!-->
-                        <div class="project-container">
-                            <div class="project-image-wrapper">
-                                <img id="project-image" src="images/flappydog.png">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-title-section">
-                                    <img id="project-logo" src="images/doge.png">
-                                    <a href="https://github.com/ej1ng/flappy-dog" id="project-title">FlappyDog</a>
-                                </div>
-                                <div id="project-text">
-                                    <p>A 2D clone of the game Flappy Bird made on Unity :P</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--JAMHACKS!-->
-                        <div class="project-container">
-                            <div class="project-image-wrapper">
-                                <img id="project-image" src="images/mind-mart.png">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-title-section">
-                                    <img id="project-logo" src="images/jamhacks.png">
-                                    <a href="https://github.com/ej1ng/mind-mart" id="project-title">Mind-Mart - Best Game Development</a>
-                                </div>
-                                <div id="project-text">
-                                    <p>A cozy shopping game coded in Java that raises mental health awareness. Users are prompted to interact with different mental health scenarios, purchase products, and make diagnostic inferences.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Science fair-->
-                        <div class="project-container">
-                            <div class="project-image-wrapper">
-                                <img id="project-image" src="images/box.png">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-title-section">
-                                    <img id="project-logo" src="images/ysc.png">
-                                    <a href="https://partner.projectboard.world/ysc/project/cover-me-treasure-from-porch-pirates-arr-nqddx" id="project-title">Canada-Wide Science Fair 2021</a>
-                                </div>
-                                <div id="project-text">
-                                    <p>A lock-in compartment built from cardboard and plywood with an L-shaped lid and electromagnet to secure deliveries from porch theft. Won gold in the York Region Science Fair, advanced to CWSF.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--FBLC-->
-                        <div class="project-container">
-                            <div class="project-image-wrapper">
-                                <img id="project-image" src="images/business-card.png">
-                            </div>
-                            <div class="project-content">
-                                <div class="project-title-section">
-                                    <img id="project-logo" src="images/fblc.png">
-                                    <a href="https://docs.google.com/document/d/1Jp_VulO0EpmAKCTM_j0mOkWevoKCESLlFGJODxWmAak/edit?usp=sharing" id="project-title">FBL Canada - Silver National Finalist</a>
-                                </div>
-                                <div id="project-text">
-                                    <p>A business plan for a future company that revolutionizes laundry care with laundry hampers that serve as efficient storage spaces that purify clothing. Advanced to the international round in Orlando, Florida.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                    <!--add more emily-->
-                    <p class="body-text">more coming soon...</p>
-                </div>                  
-
-                <!--Experiences and leadership-->
-                <div class="contact-block" id="contact">
-                    <p id="header">let's connect!</p>
-                    <ul>
-                        <li>
-                            <a class="body-text" href="https://www.linkedin.com/in/emily-jing-377468246/">
-                                LinkedIn
-                            </a>
-                        </li>
-                        <li>
-                            <a class="body-text" href="https://github.com/ej1ng">
-                                Github
-                            </a>
-                        </li>
-                        <li>
-                            <a class="body-text" href="mailto:emily.jing@uwaterloo.ca">
-                                emily.jing@uwaterloo.com
-                            </a>
-                        </li>
-                    </ul>
+        <main>
+            <!-- Intro -->
+            <section class="intro-content">
+                <div class="left-block">
+                    <h1 class="intro-text">HI, I'M EMILY !</h1>
+                    <p class="description-box intro-subtext">
+                        an 18 year old with a love for exploring and learning new things!
                     </p>
                 </div>
-
-                <div class="footer">
-                    <p id="footer-text">
-                        Coded with 💕 & 🍙
-                    </p>
+                <div class="right-block">
+                    <img class="plant-img" src="assets/images/plant.png" alt="Emily at McGill's Macdonald Campus">
+                    <p class="caption">SHAD McGill 2023 - McGill MacDonald Campus</p>
                 </div>
-
             </section>
-            
-        </div>
 
-        <script src="script.js"></script>
+            <!-- About me -->
+            <section class="about-me-block" id="about-me">
+                <div class="about-me-content">
+                    <h2 class="section-header">about me</h2>
+                    <div class="body-text">
+                        <p>hey! i'm emily jing, studying <strong>computer engineering @ university of waterloo</strong>.</p>
+                        <p>i am very interested in <strong>machine learning &amp; neural networks</strong>, as well as the intersection between computer science, engineering, business, and healthcare.</p>
+                        <p>along with my love for hackathons, you'll often catch me arranging sheet music of songs I love on the guitar or piano, attending dance workshops, swimming, or biking around in the nature ⛰️🚴🏊🌲 #grasstoucher</p>
+                    </div>
+                </div>
+                <img class="lab-img" src="assets/images/lab.png" alt="Emily in a lab">
+                <img class="guitar-img" src="assets/images/guitar.png" alt="Emily playing guitar">
+            </section>
+
+            <!-- Projects: cards are generated from assets/js/projects.js -->
+            <section class="projects-block" id="projects">
+                <h2 class="section-header">projects</h2>
+                <div class="projects-row" id="projects-row"></div>
+                <p class="body-text">more coming soon...</p>
+            </section>
+
+            <!-- Contact -->
+            <section class="contact-block" id="contact">
+                <h2 class="section-header">let's connect!</h2>
+                <ul class="body-text">
+                    <li><a href="https://www.linkedin.com/in/emily-jing-377468246/">LinkedIn</a></li>
+                    <li><a href="https://github.com/ej1ng">Github</a></li>
+                    <li><a href="mailto:emily.jing@uwaterloo.ca">emily.jing@uwaterloo.ca</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-text">Coded with 💕 &amp; 🍙</p>
+        </footer>
     </body>
-    
 </html>
