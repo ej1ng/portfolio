@@ -1,0 +1,5 @@
+.box {
+    aspect-ratio: var(--box-ratio, 16 / 9);
+    background-color: var(--box-color);
+    transition: background-color 200ms ease-out;
+}

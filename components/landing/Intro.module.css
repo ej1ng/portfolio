@@ -1,0 +1,12 @@
+.intro {
+    min-width: 0;
+}
+
+.text {
+    max-width: 32ch;
+    margin: clamp(24px, 3.3vw, 48px) 0 0;
+    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+    font-size: clamp(12px, 1.15vw, 17px);
+    line-height: 1.35;
+    color: var(--wordmark-color);
+}

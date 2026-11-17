@@ -1,0 +1,35 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--page-top); /* fills the space above the content, links centred in it */
+    min-height: 40px;
+    padding: 0 var(--page-gutter);
+    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+    font-size: clamp(12px, 1.15vw, 17px);
+    color: var(--wordmark-color);
+}
+
+.links {
+    display: flex;
+    gap: clamp(24px, 6vw, 120px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+.link:hover,
+.link:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}

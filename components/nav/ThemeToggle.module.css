@@ -1,0 +1,30 @@
+.toggle {
+    display: flex;
+    margin: -8px; /* bigger tap area without moving the icon off the right margin */
+    padding: 8px;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.toggle svg {
+    width: clamp(18px, 1.4vw, 24px);
+    height: clamp(18px, 1.4vw, 24px);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Day: show the moon. Night: show the sun. */
+.sun {
+    display: none;
+}
+:global(:root[data-theme="dark"]) .moon {
+    display: none;
+}
+:global(:root[data-theme="dark"]) .sun {
+    display: block;
+}

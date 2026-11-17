@@ -2,26 +2,42 @@
    Tune these by eye
    ========================================================= */
 :root {
-    /* Colour of the wordmark and the text on the landing page */
+    /* Day mode colours. --wordmark-color is the wordmark, nav and text colour. */
     --wordmark-color: #1355b2;
+    --page-bg: #ffffff;
+    --box-color: #d9d9d9;
 
     /* How far apart the letters slide when the wordmark opens.
        Each letter moves (its position in "emily jing") x this amount.
        The unit is the wordmark's own drawing units (the artwork is 216 wide), so it
-       scales with the wordmark. 28px makes the open name about 2.5x its normal width. */
-    --wordmark-spread: 28px;
+       scales with the wordmark. 19px opens the name to about 2x its width and stops
+       just short of the box on the right; 28px is 2.5x but slides over that box. */
+    --wordmark-spread: 19px;
 
     /* Width of the wordmark artwork */
-    --wordmark-width: clamp(190px, 60vw, 260px);
+    --wordmark-width: clamp(210px, 32vw, 460px);
 
-    --page-gutter: 11vw;
+    /* Empty space on the left AND right of the page (always equal) */
+    --page-gutter: 14.5vw;
+
+    /* Space above the page content; the nav bar sits centred inside it */
+    --page-top: 11vh;
 }
 
-/* On narrow screens 2.5x would run off the right edge, so the letters open less */
+/* Night mode colours (the toggle in the nav sets data-theme on <html>) */
+:root[data-theme="dark"] {
+    --wordmark-color: #9db4ff;
+    --page-bg: #121a33;
+    --box-color: #1f2c4a;
+}
+
+/* Phones: one column, so the wordmark is wider relative to the screen and opens less */
 @media (max-width: 600px) {
     :root {
         --wordmark-spread: 15px;
+        --wordmark-width: 56vw;
         --page-gutter: 8vw;
+        --page-top: 7vh;
     }
 }
 
@@ -30,7 +46,8 @@
    ========================================================= */
 body {
     margin: 0;
-    background-color: white;
+    background-color: var(--page-bg);
+    transition: background-color 200ms ease-out;
     overflow-x: clip; /* the open wordmark never causes sideways scrolling */
 }
 
@@ -71,6 +88,9 @@ body {
     width: 100%;
     height: auto;
     overflow: visible; /* letters may slide past the original canvas */
+    /* The artwork has 2.06 units of empty space before the "e" (out of 216).
+       Shift it left by that much so the "e" sits exactly on the page margin. */
+    margin-left: calc(-2.06 / 216 * 100%);
 }
 .wordmark-letter {
     transform: translateX(calc(var(--i) * var(--wordmark-spread) * var(--wordmark-open)));
@@ -97,20 +117,8 @@ body {
     }
 }
 
-/* =========================================================
-   Landing page (app/page.tsx)
-   ========================================================= */
-.landing {
-    box-sizing: border-box;
-    min-height: 100vh;
-    min-height: 100svh;
-    padding: 20vh var(--page-gutter) 80px;
-    color: var(--wordmark-color);
-}
-.landing-intro {
-    max-width: 33ch;
-    margin: 30px 0 0;
-    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
-    font-size: 14px;
-    line-height: 1.35;
+@media (prefers-reduced-motion: reduce) {
+    body {
+        transition: none;
+    }
 }

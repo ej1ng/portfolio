@@ -12,6 +12,10 @@ const plexMono = IBM_Plex_Mono({
     display: "swap",
 });
 
+// Runs before the page paints, so there is no flash of the wrong theme.
+// Uses the visitor's saved choice, otherwise their device's light/dark setting.
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}})();`;
+
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
     title: {
@@ -29,7 +33,10 @@ export const metadata: Metadata = {
 // The journal, log and project pages add their navbar and footer in app/(site)/layout.tsx.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={plexMono.variable} data-scroll-behavior="smooth">
+        <html lang="en" className={plexMono.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+            <head>
+                <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+            </head>
             <body>{children}</body>
         </html>
     );

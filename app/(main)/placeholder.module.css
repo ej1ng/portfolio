@@ -1,0 +1,22 @@
+/* Simple "coming soon" pages (work, about) */
+.page {
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: calc(var(--page-top) + 1vh) var(--page-gutter) 12vh;
+    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+    font-size: clamp(12px, 1.15vw, 17px);
+    line-height: 1.35;
+    color: var(--wordmark-color);
+}
+
+.title {
+    margin: 0 0 1em;
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.note {
+    margin: 0;
+    opacity: 0.7;
+}
