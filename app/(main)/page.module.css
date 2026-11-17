@@ -1,0 +1,56 @@
+/* Landing page layout: two columns on desktop, one on phones.
+   --page-gutter (app/globals.css) is the padding on both sides, so the margins match. */
+.landing {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 4vw;
+    align-items: start;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: var(--page-top) var(--page-gutter) 12vh; /* --page-top is in app/globals.css */
+    color: var(--wordmark-color);
+}
+
+/* Left column, top: wordmark + intro text */
+.intro {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 1vh; /* raise or lower the wordmark + intro text here */
+}
+
+/* Left column, below the intro */
+.boxLeft {
+    grid-column: 1;
+    grid-row: 2;
+    width: clamp(220px, 25vw, 420px);
+    margin-top: clamp(56px, 13vw, 220px);
+}
+
+/* Right column, top; its right edge sits on the right gutter */
+.boxRight {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    width: clamp(160px, 18.3vw, 310px);
+}
+
+@media (max-width: 600px) {
+    .landing {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .intro {
+        padding-top: 0;
+    }
+    .boxLeft,
+    .boxRight {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: stretch;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .boxLeft {
+        margin-top: 64px;
+    }
+}

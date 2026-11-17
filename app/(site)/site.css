@@ -57,6 +57,7 @@ html {
 }
 /* .site wraps the journal, log and project pages (see app/(site)/layout.tsx) */
 .site {
+    min-height: 100vh; /* these pages stay light even when the landing page is in night mode */
     background-color: var(--color-bg);
     font-size: clamp(14px, 1vw + 0.5rem, 18px);
     text-align: center;
