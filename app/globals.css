@@ -4,8 +4,13 @@
 :root {
     /* Day mode colours. --wordmark-color is the wordmark, nav and text colour. */
     --wordmark-color: #1355b2;
+    --link-hover-color: #7aa7f0; /* nav links when hovered */
     --page-bg: #ffffff;
     --box-color: #d9d9d9;
+
+    /* Font for the nav and all text (the wordmark is artwork, so it is not affected).
+       To preview another font, replace this value, e.g. Arial, Helvetica, sans-serif */
+    --font-text: var(--font-mono), ui-monospace, Menlo, monospace;
 
     /* How far apart the letters slide when the wordmark opens.
        Each letter moves (its position in "emily jing") x this amount.
@@ -27,6 +32,7 @@
 /* Night mode colours (the toggle in the nav sets data-theme on <html>) */
 :root[data-theme="dark"] {
     --wordmark-color: #9db4ff;
+    --link-hover-color: #ffffff;
     --page-bg: #121a33;
     --box-color: #1f2c4a;
 }
