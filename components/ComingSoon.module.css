@@ -1,10 +1,10 @@
-/* Simple "coming soon" pages (work, about) */
+/* "Coming soon" pages (see ComingSoon.tsx) */
 .page {
     box-sizing: border-box;
     min-height: 100vh;
     min-height: 100svh;
     padding: calc(var(--page-top) + 1vh) var(--page-gutter) 12vh;
-    font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+    font-family: var(--font-text);
     font-size: clamp(12px, 1.15vw, 17px);
     line-height: 1.35;
     color: var(--wordmark-color);

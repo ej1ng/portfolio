@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import styles from "../placeholder.module.css";
+import ComingSoon from "@/components/ComingSoon";
 
 export const metadata: Metadata = { title: "work" };
 
-// Placeholder until the work page is designed.
 export default function WorkPage() {
-    return (
-        <main className={styles.page}>
-            <h1 className={styles.title}>work</h1>
-            <p className={styles.note}>coming soon</p>
-        </main>
-    );
+    return <ComingSoon title="work" />;
 }

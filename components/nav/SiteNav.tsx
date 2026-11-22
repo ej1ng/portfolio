@@ -5,7 +5,8 @@ import styles from "./SiteNav.module.css";
 const LINKS = [
     { label: "home", href: "/" },
     { label: "work", href: "/work" },
-    { label: "about", href: "/about" },
+    { label: "braindump", href: "/braindump" },
+    { label: "books", href: "/books" },
 ];
 
 // Nav bar across the top of the page: links on the left, day/night toggle on the right.
